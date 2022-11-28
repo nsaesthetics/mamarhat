@@ -29,30 +29,37 @@ class _foodItemCardState extends State<foodItemCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Stack(
-                alignment: Alignment.bottomCenter,
-                children: [
-                  AspectRatio(
-                    aspectRatio: 1,
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Image.asset("images/grocery.jpg",fit: BoxFit.fitHeight,)),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(
-                      color: const Color(0xff6b8e28),
-                      borderRadius: BorderRadius.circular(10),
+              Container(
+                color: Colors.transparent,
+                height: size.height*0.2,
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    AspectRatio(
+                      aspectRatio: 1,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Image.asset("images/grocery.jpg",fit: BoxFit.fitHeight,)),
                     ),
-                    child: Text(
-                      "50% off",
-                      style: GoogleFonts.merriweather(
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                          fontSize: size.width * 0.04),
+                    Positioned(
+                      bottom: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: const Color(0xff6b8e28),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          "50% off",
+                          style: GoogleFonts.merriweather(
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                              fontSize: size.width * 0.04),
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Text(
                 "Panir Curry",
