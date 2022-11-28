@@ -41,6 +41,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _advancedDrawerController = AdvancedDrawerController();
+  selectedDrawerTile selected = selectedDrawerTile.profile;
 
 
   @override
@@ -48,99 +49,98 @@ class _HomePageState extends State<HomePage> {
     final Size size = MediaQuery
         .of(context)
         .size;
-    selectedDrawerTile selected = selectedDrawerTile.profile;
+
+
 
     return Scaffold(
       drawer: Drawer(
-        backgroundColor: Color(0xff6b8e28),
-        child: SafeArea(
-          child: Container(
-            child: ListTileTheme(
-              textColor: Colors.white,
-              iconColor: Colors.white,
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Container(
-                    width: 128.0,
-                    height: 128.0,
-                    margin: const EdgeInsets.only(
-                      top: 24.0,
-                      bottom: 64.0,
-                    ),
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      color: Colors.black26,
-                      shape: BoxShape.circle,
-                    ),
-                    child: SvgPicture.asset(
-                      'images/logo.svg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: (){
-                      selected = selectedDrawerTile.profile;
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: selected == selectedDrawerTile.profile? Colors.white:Colors.transparent
-                      ),
-                      child: ListTile(
-                        onTap: () {
-                          setState(() {
-                            selected = selectedDrawerTile.profile;
-                          });
-                        },
-                        leading: Icon(Icons.account_circle_rounded),
-                        title: Text('My Profile'),
-                        focusColor: selected==selectedDrawerTile.profile? Colors.white:Colors.grey,
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    onTap: () {},
-                    leading: Icon(Icons.favorite),
-                    title: Text('Favourite Restaurant'),
-                  ),
-                  ListTile(
-                    onTap: () {
-                      setState(() {});
-                    },
-                    leading: Icon(Icons.menu),
-                    title: Text('Order List'),
-                  ),
-                  ListTile(
-                    onTap: () {},
-                    leading: Icon(Icons.settings),
-                    title: Text('Logout'),
-                  ),
-                  ListTile(
-                    onTap: () {},
-                    leading: Icon(Icons.call),
-                    title: Text('Call Us'),
-                  ),
-                  ListTile(
-                    onTap: () {},
-                    leading: Icon(Icons.share),
-                    title: Text('Share Us'),
-                  ),
-                  Spacer(),
-                  DefaultTextStyle(
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.white54,
-                    ),
-                    child: Container(
-                      margin: const EdgeInsets.symmetric(
-                        vertical: 16.0,
-                      ),
-                      child: Text('Terms of Service | Privacy Policy'),
-                    ),
-                  ),
-                ],
+        backgroundColor: const Color(0xff6b8e28),
+        child: ListTileTheme(
+          textColor: Colors.white,
+          iconColor: Colors.white,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                width: 128.0,
+                height: 128.0,
+                margin: const EdgeInsets.only(
+                  top: 24.0,
+                  bottom: 64.0,
+                ),
+                clipBehavior: Clip.antiAlias,
+                decoration: const BoxDecoration(
+                  color: Colors.black26,
+                  shape: BoxShape.circle,
+                ),
+                child: SvgPicture.asset(
+                  'images/logo.svg',
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
+              ListTile(
+                selected: selected==selectedDrawerTile.profile?true:false,
+                selectedColor: Colors.pink,
+                onTap: () {
+                  selected = selectedDrawerTile.profile;
+                  setState(() {
+
+                  });
+
+                },
+                leading: Icon(Icons.account_circle_rounded),
+                title: Text('My Profile'),
+                focusColor: selected==selectedDrawerTile.profile? Colors.white:Colors.grey,
+              ),
+              ListTile(
+                selected: selected==selectedDrawerTile.wish?true:false,
+                selectedColor: Colors.pink,
+                onTap: () {
+                  selected = selectedDrawerTile.wish;
+                  setState(() {
+
+                  });
+
+                },
+                leading: Icon(Icons.favorite),
+                title: Text('Favourite Restaurant'),
+              ),
+              ListTile(
+                onTap: () {
+                  setState(() {});
+                },
+                leading: Icon(Icons.menu),
+                title: Text('Order List'),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.settings),
+                title: Text('Logout'),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.call),
+                title: Text('Call Us'),
+              ),
+              ListTile(
+                onTap: () {},
+                leading: Icon(Icons.share),
+                title: Text('Share Us'),
+              ),
+              Spacer(),
+              DefaultTextStyle(
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.white54,
+                ),
+                child: Container(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 16.0,
+                  ),
+                  child: Text('Terms of Service | Privacy Policy'),
+                ),
+              ),
+            ],
           ),
         ),
       ),
