@@ -44,7 +44,7 @@ class Cart with ChangeNotifier{
       return;
     }
     if(_items[id]?.quantity!=null){
-      if(_items[id]!.quantity! > 1){
+      if(_items[id]!.quantity > 1){
         _items.update(id, (existingCartItem) => cartItem(
             id: DateTime.now().toString(), name: existingCartItem.name,
             price: existingCartItem.price, quantity: existingCartItem.quantity-1));

@@ -210,12 +210,25 @@ class _foodPageState extends State<foodPage> {
                 ],
               ),
 
-              SizedBox(height: size.height *0.3,
+              SizedBox(
+                height: size.height*0.5,
+                width: size.width,
               child: ListView(
+                physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 children: [
                   foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
-                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",)
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
+
+                  foodItemCard(name: "KFC",image: 'https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1024px-KFC_logo.svg.png',desc:"Fast Food Restaurant",),
                 ],
 
 

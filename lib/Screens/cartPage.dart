@@ -19,9 +19,10 @@ class _cartPageState extends State<cartPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        foregroundColor: Colors.amber,
         title: Text("Cart", style: GoogleFonts.merriweatherSans(fontWeight: FontWeight.w700, color: Colors.black),),
         backgroundColor: Colors.transparent,elevation: 0,
-        leading: IconButton(icon: Icon(Icons.arrow_back, color: Color(0xff6b8e28),),onPressed: (){},),
+        automaticallyImplyLeading: true,
       ),
       body: SafeArea(
         child: ListView(
